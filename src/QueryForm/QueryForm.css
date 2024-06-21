@@ -1,0 +1,303 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Base Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* General Form Styling */
+.query-form {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Input and Select Box Styling */
+.query-form input,
+.query-form select {
+    width: 95%;
+    padding: 18px;
+
+    margin-bottom: 25px;
+    border: 2px solid #d4d4d4;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #f8f8f8;
+}
+
+.query-form input:focus,
+.query-form select:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+/* Placeholder transition */
+.query-form input::placeholder {
+    transition: transform 0.3s ease;
+}
+
+.query-form input:focus::placeholder {
+    transform: scale(0.9) translateY(-20px);
+}
+
+/* Button Styling */
+.button {
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button {
+    background-color: #32a852;
+    color: white;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background-color: #278440;
+    transform: translateY(-3px);
+}
+
+
+.retrieve-previous-button {
+    background-color: #ff6b81;
+    color: white;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clear-results-button {
+    background-color: #ba3e59;
+    color: white;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clear-results-button:hover {
+    background-color: #ffb547;
+    transform: translateY(-3px);
+}
+
+
+.error-message {
+    color: #ff4757;
+    /* Red color for visibility */
+    background-color: #ffe5e5;
+    /* Light red background */
+    border: 1px solid #ff4757;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 35px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #505050;
+    padding: 5px 0;
+    border-bottom: 3px solid #6DD5FA;
+    display: inline-block;
+    text-transform: none;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    text-align: center;
+}
+.button-container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px; 
+}
+/* Style the "Return to Home" button */
+.return-home-button {
+   
+    background-color: #c66bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    
+}
+
+.return-home-button:hover {
+    background-color: #218838; 
+    transform: scale(1.05);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .query-form {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Style for the container */
+.datetime-container {
+    width: 100%;           
+    max-width: 400px;       
+    margin: 20px auto;      
+    padding: 20px;         
+    background-color: #f8f8f8; 
+    border-radius: 8px;     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;          
+    justify-content: center;
+    align-items: center;    
+    margin-top: 100px;
+  }
+  
+  /* Style for the datetime picker input */
+  .simple-datetime-picker {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #dddddd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  .simple-datetime-picker:hover {
+    border-color: #cccccc;
+  }
+  
+  .simple-datetime-picker:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+  }
+
+  .schedule-label {
+    font-size: 16px;                 
+    color: #333333;                 
+    display: flex;                  
+    align-items: center;             
+    gap: 15px;                       
+    margin-bottom: 20px;            
+    cursor: pointer;                   
+    font-weight: 500;                
+    transition: color 0.3s ease;      
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-label:hover {
+    color: #1c5ff0;                 
+  }
+
+  .view-raw-code-button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px; 
+    margin: 10px 0; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    transition: background-color 0.3s; 
+  }
+  
+  .view-raw-code-button:hover {
+    background-color: #45a049; 
+  }
+
+.checkbox-label {
+    font-size: 16px;
+    color: #333333;
+    text-align: center; 
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 5px; 
+  }
+
+  .checkbox-label:hover {
+    color: #1c5ff0;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    transform: scale(1.5); 
+  }
+  
+  .centered-message {
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  
+  

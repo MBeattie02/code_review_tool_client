@@ -1,0 +1,144 @@
+/* HomePage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Main container style */
+.home-page-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  padding: 20px;
+  align-items: start;
+  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Description Section Styling */
+.home-page-description {
+  grid-column: 1 / -1; 
+  text-align: center; 
+  padding: 20px;
+  margin-top: 30px;
+  color: #555;
+  background-color: #e8eaf6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.6;
+ 
+}
+
+.home-page-header h1 {
+  font-size: 2.8rem;
+  color: #1a237e; 
+  margin: 0 auto; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  letter-spacing: 0.1em; 
+  padding: 20px 0; 
+  border-bottom: 3px solid #4fc3f7; 
+  text-align: center; 
+  
+}
+
+/* Each column is now a flex container */
+.home-page-column {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+}
+
+/* Header styling */
+.home-page-header {
+  grid-column: 1 / -1; 
+  text-align: center; 
+  margin-bottom: 30px; 
+}
+
+.home-page-header h1 {
+  font-size: 2.5rem;
+  color: #333; 
+  margin: 0; 
+}
+
+/* Tile button styling */
+.tile-button {
+  position: relative; 
+  background-size: 25%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px; 
+  height: 350px; 
+  cursor: pointer; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-end; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.tile-button:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+.tile-label {
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white; 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 1.2rem; 
+}
+
+.tile-button:nth-child(1), .tile-button:nth-child(2) {
+  grid-column: 1; /* First two tiles in the first column */
+}
+
+.tile-button:nth-child(3), .tile-button:nth-child(4) {
+  grid-column: 2; /* Next two tiles in the second column */
+}
+
+.tile-button:nth-child(5), .tile-button:nth-child(6) {
+  grid-column: 3; /* Last two tiles in the third column */
+}
+
+.tile-description {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease; 
+  font-size: 1rem; 
+}
+
+.tile-button:hover .tile-description {
+  transform: translateY(0); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-page-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page-container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tile-description {
+  animation: fadeIn 0.5s ease-in-out;
+}
